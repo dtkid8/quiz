@@ -41,7 +41,6 @@ dependencies:
   lottie: ^2.7.0
   equatable: ^2.0.5
   cached_network_image: ^3.3.0
-  flutter_cache_manager: ^3.3.1
   share_plus: ^6.3.4
   screenshot: ^2.1.0
   path_provider: ^2.1.1

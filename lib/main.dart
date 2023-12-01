@@ -1,7 +1,6 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_cache_manager/flutter_cache_manager.dart';
 import 'package:quiz/feature/home/home_screen.dart';
 import 'package:quiz/feature/question/question_repository.dart';
 import 'package:quiz/feature/topic/topic_repository.dart';
@@ -14,8 +13,6 @@ void main() async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
-  DefaultCacheManager manager = DefaultCacheManager();
-  manager.emptyCache();
   runApp(MultiRepositoryProvider(
     providers: [
       RepositoryProvider(
