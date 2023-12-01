@@ -45,8 +45,9 @@ class QuestionTimerCubit extends Cubit<GeneralState> {
     });
   }
 
-  void reset() async {
+  @override
+  Future<void> close() {
     timer.cancel();
-    emit(GeneralInitializeState());
+    return super.close();
   }
 }
