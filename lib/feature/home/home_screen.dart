@@ -97,10 +97,10 @@ class _HomeScreenState extends State<HomeScreen> {
                 IconTextButton(
                   onTap: () async {
                     final result = await Share.shareWithResult(
-                        'check out my website https://example.com');
+                        'Check out my github repository https://github.com/dtkid8/quiz');
 
                     if (result.status == ShareResultStatus.success) {
-                      print('Thank you for sharing my website!');
+                      //print('Thank you for sharing my website!');
                     }
                   },
                   text: "Share",
@@ -110,10 +110,18 @@ class _HomeScreenState extends State<HomeScreen> {
                 const SizedBox(
                   width: 40,
                 ),
-                const IconTextButton(
+                IconTextButton(
                   text: "Rate Us",
                   icon: Icons.star,
-                  iconColor: Color(0xffF5D329),
+                  iconColor: const Color(0xffF5D329),
+                  onTap: () async {
+                    final result = await Share.shareWithResult(
+                        'Stars my github repository https://github.com/dtkid8/quiz');
+
+                    if (result.status == ShareResultStatus.success) {
+                      //print('Thank you for sharing my website!');
+                    }
+                  },
                 ),
               ],
             )
